@@ -19,8 +19,6 @@ namespace UnityEngine.XR.Content.Interaction
 
 
         [Header("Ammo Settings")]
-        [SerializeField]
-        int m_maxAmmo = 6;
 
         [SerializeField]
         [Tooltip("弾切れ時のサウンド")]
@@ -30,16 +28,11 @@ namespace UnityEngine.XR.Content.Interaction
         [Tooltip("弾を撃つときのAudioSource")]
         AudioSource m_FireAudioSource = null;
 
-        private int currentAmmo;
-
-        void Start()
-        {
-            currentAmmo = m_maxAmmo;
-        }
+        private Magazine currentMagazine;
 
         public void Fire()
         {
-            if (currentAmmo <= 0)
+            if (currentMagazine == null || !currentMagazine.TryUseAmmo() )
             {
                 if (m_OutOfAmmoSound != null)
                 {
@@ -51,19 +44,26 @@ namespace UnityEngine.XR.Content.Interaction
             GameObject newObject = Instantiate(m_ProjectilePrefab, m_StartPoint.position, m_StartPoint.rotation, null);
 
 
-            if (newObject.TryGetComponent(out Rigidbody rigidBody))
+            if (newObject.TryGetComponent(out Rigidbody rigidBody)) {
                 ApplyForce(rigidBody);
+            }
 
 
             if (m_FireAudioSource != null)
+            {
                 m_FireAudioSource.Play();
+            }
 
-            currentAmmo--;
         }
 
-        public void Reload()
+        public void SetMagazine(Magazine mag)
         {
-            currentAmmo = m_maxAmmo;
+            currentMagazine = mag;
+        }
+
+        public void EjectMagazine()
+        {
+            currentMagazine = null;
         }
 
         void ApplyForce(Rigidbody rigidBody)
