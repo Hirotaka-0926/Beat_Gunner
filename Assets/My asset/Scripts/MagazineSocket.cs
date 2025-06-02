@@ -28,6 +28,11 @@ public class MagazineSocket : MonoBehaviour
         {
             gun.SetMagazine(mag);
             Debug.Log("マガジン装填 完了");
+            var rb = mag.GetComponent<Rigidbody>();
+        if (rb != null)
+        {
+            rb.isKinematic = true;
+        }
         }
     }
 
