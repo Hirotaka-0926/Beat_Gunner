@@ -29545,9 +29545,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: e5e88e22a2e4bc946bcecb9cb1737035, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 95bee57168ca8cd4e809c919fda4aca7, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.57
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -29727,6 +29727,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 2007334576}
+        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
+        m_MethodName: Play
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls: []
@@ -29885,9 +29897,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 623c5848030e9674893bb3bb376834b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ProjectilePrefab: {fileID: 7881903151233780332, guid: c2d3ffeb34921a9489a385e1db128954, type: 3}
+  m_ProjectilePrefab: {fileID: 7760623572499797706, guid: 4ecbc4ea906509d4e9249c541ab8517c, type: 3}
   m_StartPoint: {fileID: 640146432}
-  m_LaunchSpeed: 750
+  m_LaunchSpeed: 10000
 --- !u!114 &2020281565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29927,7 +29939,9 @@ PlayableDirector:
   m_WrapMode: 0
   m_DirectorUpdateMode: 1
   m_InitialTime: 0
-  m_SceneBindings: []
+  m_SceneBindings:
+  - key: {fileID: 2697131436925573258, guid: 5c5abec4b8a119b4baab67ca40f8f0db, type: 2}
+    value: {fileID: 0}
   m_ExposedReferences:
     m_References: []
 --- !u!95 &2020281568
