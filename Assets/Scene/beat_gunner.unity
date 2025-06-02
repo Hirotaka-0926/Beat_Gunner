@@ -426,7 +426,7 @@ PrefabInstance:
       addedObject: {fileID: 2020281565}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b899caee58e3a2942a1863b3d04e297f, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 2020281564}
+      addedObject: {fileID: 2020281569}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: b899caee58e3a2942a1863b3d04e297f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2020281563}
@@ -29702,34 +29702,10 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2020281568}
-        m_TargetAssemblyTypeName: UnityEngine.Animator, UnityEngine
-        m_MethodName: ResetTrigger
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: Fire
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2020281564}
-        m_TargetAssemblyTypeName: UnityEngine.XR.Content.Interaction.LaunchProjectile,
-          Unity.XR.Content.Interaction
+      - m_Target: {fileID: 2020281569}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Content.Interaction.GunProjectile,
+          Assembly-CSharp
         m_MethodName: Fire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 2007334576}
-        m_TargetAssemblyTypeName: UnityEngine.AudioSource, UnityEngine
-        m_MethodName: Play
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29885,21 +29861,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_MultiSelectPosition: 0
   m_MultiSelectRotation: 0
---- !u!114 &2020281564
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2020281559}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 623c5848030e9674893bb3bb376834b8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ProjectilePrefab: {fileID: 7760623572499797706, guid: 4ecbc4ea906509d4e9249c541ab8517c, type: 3}
-  m_StartPoint: {fileID: 640146432}
-  m_LaunchSpeed: 10000
 --- !u!114 &2020281565
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29965,6 +29926,24 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2020281569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2020281559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6aa8c4a62a0760c4c817c500bd90571c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ProjectilePrefab: {fileID: 7760623572499797706, guid: 4ecbc4ea906509d4e9249c541ab8517c, type: 3}
+  m_StartPoint: {fileID: 640146432}
+  m_LaunchSpeed: 10000
+  m_maxAmmo: 6
+  m_OutOfAmmoSound: {fileID: 8300000, guid: abebe8f225f436a49aa4be8db4c478ea, type: 3}
+  m_FireAudioSource: {fileID: 2007334576}
 --- !u!1 &2021173548
 GameObject:
   m_ObjectHideFlags: 0
