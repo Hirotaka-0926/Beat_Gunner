@@ -4446,7 +4446,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82d66a2a0b4866044a9151f3e19d26f1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  gun: {fileID: 1295885521}
+  gun: {fileID: 1295885526}
 --- !u!1001 &368210517
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18529,19 +18529,19 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 5596227809ce1f84f89eb7fedbaba3d2, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 571029fd78e7b6849ad1f8d0fbee6019, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 0.5
-  m_Pitch: 1
+  m_Volume: 0.945
+  m_Pitch: 2.32
   Loop: 0
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 128
+  Priority: 140
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: 0.57
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -18575,7 +18575,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -20370,7 +20370,7 @@ PrefabInstance:
       addedObject: {fileID: 1295885518}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5966631cc39737b40980385fae35a122, type: 3}
       insertIndex: -1
-      addedObject: {fileID: 1295885521}
+      addedObject: {fileID: 1295885526}
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 5966631cc39737b40980385fae35a122, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1295885524}
@@ -20477,20 +20477,7 @@ MonoBehaviour:
   m_Activated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1295885521}
-        m_TargetAssemblyTypeName: UnityEngine.XR.Content.Interaction.GunProjectile,
-          Assembly-CSharp
-        m_MethodName: Fire
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
-      - m_Target: {fileID: 1295885521}
+      - m_Target: {fileID: 1295885526}
         m_TargetAssemblyTypeName: UnityEngine.XR.Content.Interaction.GunProjectile,
           Assembly-CSharp
         m_MethodName: SuppressorAdded
@@ -20503,13 +20490,39 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1295885526}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Content.Interaction.AutoGunProjectile,
+          Assembly-CSharp
+        m_MethodName: TriggerFire
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   m_Deactivated:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1295885521}
+      - m_Target: {fileID: 1295885526}
         m_TargetAssemblyTypeName: UnityEngine.XR.Content.Interaction.GunProjectile,
           Assembly-CSharp
         m_MethodName: SuppressorRemoved
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1295885526}
+        m_TargetAssemblyTypeName: UnityEngine.XR.Content.Interaction.AutoGunProjectile,
+          Assembly-CSharp
+        m_MethodName: StopFire
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -20599,24 +20612,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &1295885521
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1295885517}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6aa8c4a62a0760c4c817c500bd90571c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_ProjectilePrefab: {fileID: 7760623572499797706, guid: 4ecbc4ea906509d4e9249c541ab8517c, type: 3}
-  m_StartPoint: {fileID: 1209438227}
-  m_LaunchSpeed: 10000
-  m_OutOfAmmoSound: {fileID: 8300000, guid: abebe8f225f436a49aa4be8db4c478ea, type: 3}
-  m_FireAudioSource: {fileID: 1184658941}
-  m_SuppressorSound: {fileID: 1295885525}
 --- !u!95 &1295885522
 Animator:
   serializedVersion: 5
@@ -20797,6 +20792,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1295885526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1295885517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d31dd0c8d56edd746a22d66807f876a1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ProjectilePrefab: {fileID: 7760623572499797706, guid: 4ecbc4ea906509d4e9249c541ab8517c, type: 3}
+  m_StartPoint: {fileID: 1209438227}
+  m_LaunchSpeed: 10000
+  m_OutOfAmmoSound: {fileID: 8300000, guid: abebe8f225f436a49aa4be8db4c478ea, type: 3}
+  m_FireAudioSource: {fileID: 1184658941}
+  m_SuppressorSound: {fileID: 1295885525}
+  interval: 0.001
 --- !u!1001 &1298507138
 PrefabInstance:
   m_ObjectHideFlags: 0
