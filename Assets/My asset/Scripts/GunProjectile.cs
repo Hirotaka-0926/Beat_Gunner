@@ -17,7 +17,6 @@ namespace UnityEngine.XR.Content.Interaction
         [Tooltip("The speed at which the projectile is launched")]
         float m_LaunchSpeed = 1.0f;
 
-
         [Header("Ammo Settings")]
 
         [SerializeField]
@@ -28,32 +27,43 @@ namespace UnityEngine.XR.Content.Interaction
         [Tooltip("弾を撃つときのAudioSource")]
         AudioSource m_FireAudioSource = null;
 
+        [SerializeField]
+        [Tooltip("サプレッサー追加時のサウンド")]
+        AudioSource m_SuppressorSound = null;
+
+        AudioSource currentSound = null;
+
         private Magazine currentMagazine;
 
         public void Fire()
         {
-            if (currentMagazine == null || !currentMagazine.TryUseAmmo() )
+            if (currentSound == null && m_FireAudioSource != null)
+            {
+                // 初回の発射音を設定
+                SuppressorRemoved();
+            }
+
+            if (currentMagazine == null || !currentMagazine.TryUseAmmo())
             {
                 if (m_OutOfAmmoSound != null)
                 {
                     AudioSource.PlayClipAtPoint(m_OutOfAmmoSound, m_StartPoint.position);
                 }
-
                 return;
             }
+
             GameObject newObject = Instantiate(m_ProjectilePrefab, m_StartPoint.position, m_StartPoint.rotation, null);
 
-
-            if (newObject.TryGetComponent(out Rigidbody rigidBody)) {
+            if (newObject.TryGetComponent(out Rigidbody rigidBody))
+            {
                 ApplyForce(rigidBody);
             }
 
-
-            if (m_FireAudioSource != null)
+            // currentSound を再生（Suppressor の状態に応じて）
+            if (currentSound != null)
             {
-                m_FireAudioSource.Play();
+                currentSound.Play();
             }
-
         }
 
         public void SetMagazine(Magazine mag)
@@ -70,6 +80,22 @@ namespace UnityEngine.XR.Content.Interaction
         {
             Vector3 force = m_StartPoint.forward * m_LaunchSpeed;
             rigidBody.AddForce(force);
+        }
+
+        public void SuppressorAdded()
+        {
+            if (m_SuppressorSound != null)
+            {
+                currentSound = m_SuppressorSound;
+            }
+        }
+
+        public void SuppressorRemoved()
+        {
+            if (m_FireAudioSource != null)
+            {
+                currentSound = m_FireAudioSource;
+            }
         }
     }
 }
