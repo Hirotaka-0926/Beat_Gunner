@@ -29,7 +29,7 @@ public class TargetMover : MonoBehaviour
         {
             float t = timer / approachDuration;
             transform.position = Vector3.Lerp(startPosition, targetPosition, t);
-            Debug.Log($"Moving to target: {transform.position}");
+ 
 
             if (t >= 1.0f)
             {

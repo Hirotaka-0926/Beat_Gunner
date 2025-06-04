@@ -19,7 +19,7 @@ public class TargetSpawner : MonoBehaviour
 
 public void SpawnTarget()
     {
-        Debug.Log("的を生成");
+ 
 
         // 最終到達点
         Vector3 targetPosition = spawnPoint.position;
