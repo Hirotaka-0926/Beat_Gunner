@@ -17,13 +17,20 @@ public class TargetSpawner : MonoBehaviour
     [Header("到達後に沈む時間（秒）")]
     [SerializeField] private float sinkTime = 1.0f;
 
-    public void SpawnTarget()
+public void SpawnTarget()
     {
         Debug.Log("的を生成");
 
-        // 出現位置を spawnPoint のZ方向奥に設定
-        Vector3 spawnPosition = spawnPoint.position + spawnPoint.forward * spawnOffsetZ;
+        // 最終到達点
         Vector3 targetPosition = spawnPoint.position;
+
+        // カメラ正面ベクトル（水平成分だけを使用）
+        Vector3 viewDir = Camera.main.transform.forward;
+        viewDir.y = 0f;          // 上下の傾きを無視
+        viewDir.Normalize();
+
+        // 奥方向 viewDir に spawnOffsetZ だけ離した所で出現
+        Vector3 spawnPosition = targetPosition + viewDir * spawnOffsetZ;
 
         // プレハブ生成
         GameObject target = Instantiate(targetPrefab, spawnPosition, Quaternion.identity);

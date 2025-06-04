@@ -18162,7 +18162,6 @@ Transform:
   - {fileID: 657290259}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
-<<<<<<< HEAD
 --- !u!1001 &1200804430
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18241,8 +18240,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8733216331496780273, guid: 90fe79d6101980a4999f7ba077cb91ce, type: 3}
   m_PrefabInstance: {fileID: 1200804430}
   m_PrefabAsset: {fileID: 0}
-=======
->>>>>>> 7f7f7a124e37f74add91f0514227d660cfb0d64d
 --- !u!1 &1202520400
 GameObject:
   m_ObjectHideFlags: 0
@@ -18384,7 +18381,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1202520400}
   m_CullTransparentMesh: 0
-<<<<<<< HEAD
 --- !u!1 &1205087195 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8765677504791303352, guid: 90fe79d6101980a4999f7ba077cb91ce, type: 3}
@@ -18552,8 +18548,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
-=======
->>>>>>> 7f7f7a124e37f74add91f0514227d660cfb0d64d
 --- !u!1 &1207484725
 GameObject:
   m_ObjectHideFlags: 0
@@ -21077,7 +21071,6 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RaycastTriggerInteraction: 1
-<<<<<<< HEAD
 --- !u!1 &1376645517
 GameObject:
   m_ObjectHideFlags: 0
@@ -21131,8 +21124,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.9999999, y: 1.0849247, z: 1}
   m_Center: {x: -0.000000023036652, y: 0.35076672, z: -0.00000014056123}
-=======
->>>>>>> 7f7f7a124e37f74add91f0514227d660cfb0d64d
 --- !u!1 &1382509436
 GameObject:
   m_ObjectHideFlags: 0
