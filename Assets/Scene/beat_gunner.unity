@@ -6951,9 +6951,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetPrefab: {fileID: 2907288801317260505, guid: dcec536d8936b324889c1ad453ada8b9, type: 3}
   spawnPoint: {fileID: 552340134}
-  spawnOffsetZ: 2
-  approachTime: 2
-  sinkTime: 2
+  spawnOffsetZ: 10
+  approachTime: 10
+  sinkTime: 10
 --- !u!114 &552340136
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27557,7 +27557,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 77c0ade404b6b184fbd908025ba64d71, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxAmmo: 6
+  maxAmmo: 30
 --- !u!1 &1793296595
 GameObject:
   m_ObjectHideFlags: 0

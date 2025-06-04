@@ -2,39 +2,44 @@ using UnityEngine;
 
 public class TargetMover : MonoBehaviour
 {
+    private Vector3 startPosition;
     private Vector3 targetPosition;
     private float approachDuration;
     private float sinkDuration;
-    private float timer = 0f;
+    private float timer;
+    private bool isMoving = true;
 
-    private enum State { MovingToTarget, Dropping }
-    private State currentState = State.MovingToTarget;
-
-    public void Init(Vector3 finalPosition, float approachTime, float sinkTime)
+    public void Initialize( Vector3 endPos, float approachTime, float sinkTime)
     {
-        targetPosition = finalPosition;
-        approachDuration = Mathf.Max(0.01f, approachTime); // 0防止
+        startPosition = transform.position;
+        targetPosition = endPos;
+        approachDuration = Mathf.Max(0.01f, approachTime);
         sinkDuration = Mathf.Max(0.01f, sinkTime);
+        timer = 0f;
+        isMoving = true;
+
+        transform.position = startPosition; // 確実にスタート位置に配置
     }
 
     void Update()
     {
         timer += Time.deltaTime;
 
-        if (currentState == State.MovingToTarget)
+        if (isMoving)
         {
-            float t = Mathf.Clamp01(timer / approachDuration);
-            transform.position = Vector3.Lerp(transform.position, targetPosition, t);
+            float t = timer / approachDuration;
+            transform.position = Vector3.Lerp(startPosition, targetPosition, t);
+            Debug.Log($"Moving to target: {transform.position}");
 
             if (t >= 1.0f)
             {
-                currentState = State.Dropping;
+                isMoving = false;
                 timer = 0f;
             }
         }
-        else if (currentState == State.Dropping)
+        else
         {
-            transform.position += Vector3.down * (Time.deltaTime * 0.5f);
+            transform.position += Vector3.down * Time.deltaTime * 0.5f;
 
             if (timer >= sinkDuration)
             {
