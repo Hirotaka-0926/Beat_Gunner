@@ -346,6 +346,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -69.948006
       objectReference: {fileID: 0}
+    - target: {fileID: -1547744786906573287, guid: b899caee58e3a2942a1863b3d04e297f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6181774a924b1824a9b872166eacf42a, type: 2}
+    - target: {fileID: 3576936881089943881, guid: b899caee58e3a2942a1863b3d04e297f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6181774a924b1824a9b872166eacf42a, type: 2}
+    - target: {fileID: 8511393731239778264, guid: b899caee58e3a2942a1863b3d04e297f, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6181774a924b1824a9b872166eacf42a, type: 2}
     - target: {fileID: 4862484800023522930, guid: 796d4ee7f4cf3ec46877a335d40d6296, type: 3}
       propertyPath: m_Name
       value: Launcher
@@ -3342,6 +3354,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: a302b91d1087220468979bf85de29de1, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
     - target: {fileID: 919132149155446097, guid: a302b91d1087220468979bf85de29de1, type: 3}
       propertyPath: m_Name
       value: HoloGraphic
@@ -10558,6 +10574,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 798c9b9c76555034283c8b7809be41b6, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
     - target: {fileID: 919132149155446097, guid: 798c9b9c76555034283c8b7809be41b6, type: 3}
       propertyPath: m_Name
       value: Muzzle_Suppressor_D
@@ -13440,6 +13460,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 88254d6bde210e240a638a186d58beaf, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
     - target: {fileID: 919132149155446097, guid: 88254d6bde210e240a638a186d58beaf, type: 3}
       propertyPath: m_Name
       value: ForwardGrip_C
@@ -19580,6 +19604,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1230061735}
     m_Modifications:
+    - target: {fileID: -8929835469737787308, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
     - target: {fileID: -8679921383154817045, guid: 5966631cc39737b40980385fae35a122, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.114
@@ -19620,14 +19648,54 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 85.608
       objectReference: {fileID: 0}
+    - target: {fileID: -8094722575043108725, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
+    - target: {fileID: -7739301172303482782, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
+    - target: {fileID: -6255968716867283220, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49142ab539d7ce747b7c98e86db8b9a2, type: 2}
+    - target: {fileID: -5602744094548938719, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49142ab539d7ce747b7c98e86db8b9a2, type: 2}
+    - target: {fileID: -3801716663611383996, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 6181774a924b1824a9b872166eacf42a, type: 2}
+    - target: {fileID: -638355302684218129, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
     - target: {fileID: 919132149155446097, guid: 5966631cc39737b40980385fae35a122, type: 3}
       propertyPath: m_Name
       value: SMG_K
       objectReference: {fileID: 0}
+    - target: {fileID: 2429302734592961799, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49142ab539d7ce747b7c98e86db8b9a2, type: 2}
     - target: {fileID: 2434628803823300162, guid: 5966631cc39737b40980385fae35a122, type: 3}
       propertyPath: m_LightProbeUsage
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2434628803823300162, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49142ab539d7ce747b7c98e86db8b9a2, type: 2}
+    - target: {fileID: 3716200082674774148, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 49142ab539d7ce747b7c98e86db8b9a2, type: 2}
+    - target: {fileID: 5386266284001149148, guid: 5966631cc39737b40980385fae35a122, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -27394,6 +27462,10 @@ PrefabInstance:
       propertyPath: m_LightProbeUsage
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 7034e36af7384aa43b52ca9d11d42bec, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: cbf365deb3811b241a8fa7eb620c579a, type: 2}
     - target: {fileID: 919132149155446097, guid: 7034e36af7384aa43b52ca9d11d42bec, type: 3}
       propertyPath: m_Name
       value: Reflex
