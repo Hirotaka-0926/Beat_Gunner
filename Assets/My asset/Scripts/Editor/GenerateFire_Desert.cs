@@ -5,7 +5,7 @@ using System.Diagnostics;
 
 public static class Mp3DividerAsset
 {
-    public static float splitTime = 4.0f;
+    public static float splitTime = 0.6f;
 
     [MenuItem("自作メニュー/Create/Divide Audio File")]
     public static void DivideAudioClip()
