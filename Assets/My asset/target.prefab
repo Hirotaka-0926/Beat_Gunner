@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 722650436965043932}
   - component: {fileID: 3030653903955527484}
+  - component: {fileID: 8429340998276379874}
   m_Layer: 0
   m_Name: target
   m_TagString: Untagged
@@ -47,6 +48,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   hitEffectPrefab: {fileID: 919132149155446097, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
+--- !u!65 &8429340998276379874
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2907288801317260505}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &5101355640420379018
 GameObject:
   m_ObjectHideFlags: 0

@@ -6,6 +6,7 @@ public class HitReceiver : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
+        Debug.Log("当たったよ");
         // ヒットした相手が弾か確認（タグなどで判定）
         if (collision.gameObject.CompareTag("Bullet"))
         {
@@ -13,7 +14,7 @@ public class HitReceiver : MonoBehaviour
             ContactPoint contact = collision.contacts[0];
             Vector3 hitPosition = contact.point;
             Quaternion hitRotation = Quaternion.LookRotation(contact.normal);
-
+            Debug.Log($"Hit at position: {hitPosition}, normal: {contact.normal}");
             // エフェクトを生成
             if (hitEffectPrefab != null)
             {
