@@ -46,7 +46,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7130271388e8f49be294b601f62255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffectPrefab: {fileID: 0}
+  hitEffectPrefab: {fileID: 919132149155446097, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
 --- !u!1 &5101355640420379018
 GameObject:
   m_ObjectHideFlags: 0
