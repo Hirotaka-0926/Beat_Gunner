@@ -1,29 +1,37 @@
 using UnityEngine;
 
-public class HitReceiver : MonoBehaviour
+public class HitReceiverParticle : MonoBehaviour
 {
-    [SerializeField] private GameObject hitEffectPrefab;
+    [SerializeField] private ParticleSystem hitParticlePrefab;
+    [SerializeField] private float extraLifeTime = 0.3f;
 
-    void OnCollisionEnter(Collision collision)
+    private bool _hitHandled = false;
+    private const string BulletTag = "Bullet";
+
+    private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("当たったよ");
-        // ヒットした相手が弾か確認（タグなどで判定）
-        if (collision.gameObject.CompareTag("Bullet"))
-        {
-            // 命中位置と法線を取得
-            ContactPoint contact = collision.contacts[0];
-            Vector3 hitPosition = contact.point;
-            Quaternion hitRotation = Quaternion.LookRotation(contact.normal);
-            Debug.Log($"Hit at position: {hitPosition}, normal: {contact.normal}");
-            // エフェクトを生成
-            if (hitEffectPrefab != null)
-            {
-                GameObject effect = Instantiate(hitEffectPrefab, hitPosition, hitRotation);
-                Destroy(effect, 2f);
-            }
+        if (!collision.gameObject.CompareTag(BulletTag) || _hitHandled) return;
+        _hitHandled = true;
 
-            // 弾を破棄
-            Destroy(collision.gameObject);
+        // 衝突情報
+        ContactPoint cp = collision.contacts[0];
+        Vector3 pos     = cp.point;
+        Quaternion rot  = Quaternion.LookRotation(cp.normal);
+
+        // パーティクル生成
+        if (hitParticlePrefab)
+        {
+            ParticleSystem ps = Instantiate(hitParticlePrefab, pos, rot);
+            ps.Play();
+
+            float ttl = ps.main.duration + ps.main.startLifetime.constantMax + extraLifeTime;
+            Destroy(ps.gameObject, ttl);
         }
+
+        // 弾を破棄
+        Destroy(collision.gameObject);
+
+        // ★ 自分（被弾オブジェクト）も破棄
+        Destroy(gameObject);
     }
 }

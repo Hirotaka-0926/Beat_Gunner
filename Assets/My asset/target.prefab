@@ -47,7 +47,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc7130271388e8f49be294b601f62255, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitEffectPrefab: {fileID: 919132149155446097, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
+  hitParticlePrefab: {fileID: 1600479398768108213, guid: fb316189b06cf7a4789819fa95a3946e, type: 3}
+  extraLifeTime: 0.3
 --- !u!65 &8429340998276379874
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -238,8 +239,12 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedComponents:
+    - {fileID: 163147145778691220, guid: 06b4ece1c4423ab479d9282189c023c7, type: 3}
+    - {fileID: 6632448957571200734, guid: 06b4ece1c4423ab479d9282189c023c7, type: 3}
+    - {fileID: 5701722396296746505, guid: 06b4ece1c4423ab479d9282189c023c7, type: 3}
+    m_RemovedGameObjects:
+    - {fileID: 1203282762759000512, guid: 06b4ece1c4423ab479d9282189c023c7, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 06b4ece1c4423ab479d9282189c023c7, type: 3}

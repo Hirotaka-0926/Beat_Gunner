@@ -4748,63 +4748,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 338660825}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!1001 &347373135
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 23.006414
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 21.634842
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -8679921383154817045, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 919132149155446097, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
-      propertyPath: m_Name
-      value: koreda
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 4296c2066eb5c1b4e829e2c38aa6708f, type: 3}
 --- !u!1 &350421942
 GameObject:
   m_ObjectHideFlags: 0
@@ -8117,8 +8060,8 @@ MonoBehaviour:
   m_Events:
     m_Signals:
     - {fileID: 11400000, guid: af35936ae7e556643892bd49bf7403c4, type: 2}
-    - {fileID: 11400000, guid: 9d7b81e2a2880e6498c9ccc9377ea1e0, type: 2}
     - {fileID: 11400000, guid: 07f6606674c85ad418b3d7790706f49b, type: 2}
+    - {fileID: 11400000, guid: 9d7b81e2a2880e6498c9ccc9377ea1e0, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -8146,17 +8089,17 @@ MonoBehaviour:
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
-            m_BoolArgument: 1
+            m_BoolArgument: 0
           m_CallState: 2
     - m_PersistentCalls:
         m_Calls:
         - m_Target: {fileID: 552340133}
-          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
-          m_MethodName: SetActive
-          m_Mode: 6
+          m_TargetAssemblyTypeName: 
+          m_MethodName: 
+          m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_ObjectArgumentAssemblyTypeName: 
             m_IntArgument: 0
             m_FloatArgument: 0
             m_StringArgument: 
@@ -30266,6 +30209,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: target
       objectReference: {fileID: 0}
+    - target: {fileID: 3030653903955527484, guid: dcec536d8936b324889c1ad453ada8b9, type: 3}
+      propertyPath: extraLifeTime
+      value: 0.001
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -30384,19 +30331,7 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 1
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: UnityEngine.Playables.PlayableDirector, UnityEngine
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
+          m_BoolArgument: 1
         m_CallState: 2
 --- !u!114 &1654874980
 MonoBehaviour:
@@ -45305,5 +45240,4 @@ SceneRoots:
   - {fileID: 695608985}
   - {fileID: 920156707}
   - {fileID: 654340526}
-  - {fileID: 347373135}
   - {fileID: 1645593049}
